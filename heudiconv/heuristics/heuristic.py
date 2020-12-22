@@ -24,7 +24,10 @@ def infotodict(seqinfo):
 
     """
 
-    info = {}
+    field = create_key(os.path.join('sub-{subject}','field', 'sub-{subject}_fieldname'))
+
+    info = {field: []}
+
     for idx, s in enumerate(seqinfo):
         if 'name' in s.dcm_dir_name.lower():
             info[field] = [s.series_id]
