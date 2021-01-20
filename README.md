@@ -1,11 +1,12 @@
-# CMU_heudiconv pipeline 
+# CMU heudiconv pipeline 
 ### Enables conversion of a series of DICOM folders to BIDS format.
-#### Author: Jacob Prince (TarrLab @ CMU - jacob.samuel.prince@gmail.com)
+#### Compiled by: Jacob Prince (TarrLab @ CMU - jacob.samuel.prince@gmail.com)
 
 #### Software requirements:
 - UNIX (Mac OSX or Linux)
 - Docker
 - MATLAB ([R2018a?] or later)
+- heudiconv install (see: https://github.com/nipy/heudiconv)
 
 #### What does this repo contain?
 This repository provides the necessary template code to run the heudiconv procedure, which efficiently converts DICOM files into BIDS format using a set of functions within the heudiconv Docker container. As such, Docker must be running in order for the pipeline to execute. In addition, the user must have a working version of MATLAB (R2018a or later?), and have set the path to the MATLAB installation correctly (see below) in order to execute the relevant functions automatically when the pipeline is run.
@@ -35,3 +36,7 @@ After this pipeline is run, issues with naming can be easily diagnosed by runnin
 
 ## IMPORTANT: 
 especially for first-time users, it is expected that it will take more than 1 attempt to successfully format a `heuristic.py` file such that the output BIDS folder passes BIDS-validation. *As such, it is STRONGLY advised to first run this pipeline using a DICOM files from a single subject, and to ensure that all outputs are reasonable before proceeding to a full-scale conversion of the remaining subjects.* This may even include proceeding beyond BIDS conversion to run subsequent preprocessing routines (e.g. fmriprep) to verify that the DICOM conversion worked as expected. This pipeline template has been written for converting data from the [scanner?]. It may require user modification if used to convert DICOMs from other scan sites.
+
+## FAQs:
+
+todo
